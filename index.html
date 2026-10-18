@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#101827">
+  <title>NEXUS: Office Hustle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-root"></div>
+  <header class="topbar">
+    <div><strong>NEXUS</strong><small>OFFICE HUSTLE · PROTOTYPE 0.1</small></div>
+    <div class="stats"><span>₦ <b id="money">0</b></span><span>⏱ <b id="timer">02:00</b></span></div>
+  </header>
+  <div class="objective"><span class="dot"></span><span id="objective">Cari meja kerja dan dekati komputer.</span></div>
+  <div id="hint" class="hint">Gunakan joystick untuk bergerak.</div>
+  <div id="joystick" aria-label="Joystick gerakan"><div id="stick"></div></div>
+  <button id="interact" class="interact" disabled>INTERAKSI</button>
+  <section id="computer-panel" class="computer-panel hidden">
+    <div class="panel-head"><div><small>NEXUS WORKSTATION</small><h2>Inbox Kantor</h2></div><button id="close-panel" aria-label="Tutup">✕</button></div>
+    <p class="muted">Permintaan kerja simulasi dari klien fiktif. Periksa pesan lalu pilih tindakan.</p>
+    <div class="email"><small id="client-label">PESAN MASUK · #001</small><h3 id="client-title">Pembaruan data inventaris</h3><p id="client-message">Tolong cocokkan jumlah barang di daftar hari ini.</p></div>
+    <div class="task-actions"><button id="accept-task">Selesaikan tugas</button><button id="skip-task" class="secondary">Lewati</button></div>
+    <p id="task-result" class="result" aria-live="polite"></p>
+    <div class="panel-foot"><span>Saldo virtual</span><strong>₦ <span id="panel-money">0</span></strong></div>
+  </section>
+  <div id="toast" class="toast hidden"></div>
+  <div id="end-panel" class="end-panel hidden"><h2>Shift selesai!</h2><p id="summary"></p><button id="restart">Main lagi</button></div>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
